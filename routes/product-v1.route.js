@@ -4,6 +4,6 @@ var {
 } = require("../controllers/product.controller");
 
 module.exports = function(router) {
-	router.get("/products", getAllProducts);
-	router.get("/products/:id", getSingleProduct);
+	router.get("/v1/products", getAllProducts);
+	router.get("/v1/products/:id", getSingleProduct);
 };
