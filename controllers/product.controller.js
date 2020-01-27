@@ -1,24 +1,20 @@
-function getAllProducts(req, res, next) {
-	res.json([
-		{
-			name: "Feta",
-			price: 17.95
-		},
-		{
-			name: "Brie",
-			price: 45.24
-		}
-	]);
+var Product = require("../models/product.model");
+
+async function getAllProducts(req, res, next) {
+	let products = await Product.findAll();
+	res.json(products)
 }
 
 function getSingleProduct(req, res, next) {
-	res.json({
-		name: "Feta",
-		price: 17.95
-	});
+	res.json()
+}
+
+function createProduct(req, res, next){
+	
 }
 
 module.exports = {
 	getAllProducts,
-	getSingleProduct
-};
+	getSingleProduct,
+	createProduct
+}

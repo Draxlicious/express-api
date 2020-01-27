@@ -1,0 +1,23 @@
+var { Sequelize } = require("sequelize");
+var sequelize = new Sequelize({
+    dialect: "sqlite",
+    storage: "./database/api.sqlite"
+});
+
+function dbAuth(){
+    sequelize
+    .authenticate()
+    .then(function(){
+        console.info("database connected");
+        
+    })
+    .catch(function(error){
+        console.error("could not connect to database", error);
+    })
+}
+
+
+module.exports = {
+    sequelize,
+    dbAuth
+};
