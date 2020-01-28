@@ -1,5 +1,5 @@
 ## Restful
-Represtational - State (less) - Transfer
+Represtational - State (less - man kan ikke være logged ind) - Transfer ( overføre data via http / https)
 
 ## api
 Application - Programming - Interface
@@ -10,8 +10,11 @@ Application - Programming - Interface
 - URL
 - HTTP og HTTPS
 - Adgang til interface
+(status fejlkoder eksempel. 204 og 404)
 
 # RULES for restful-api
+- man må ikke ændre stien i dataen eller ødelægger man det for frontend-udviklere
+- versioner v1/v2/v3/v4/hvad-end-vi-bruger
 HTTP Metodes
 - GET request (READ/RETRIEVE)
 - Delete request (DELETE)
